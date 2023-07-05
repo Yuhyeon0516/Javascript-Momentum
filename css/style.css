@@ -80,6 +80,11 @@ body {
   flex-direction: column;
 }
 
+#todo-form {
+  position: sticky;
+  top: 0;
+}
+
 #todo-form input {
   width: 350px;
   height: 50px;
@@ -100,6 +105,8 @@ body {
 
 #todo-list {
   padding: 0;
+  max-height: 350px;
+  overflow: scroll;
 }
 
 #todo-list li {
@@ -111,17 +118,17 @@ body {
 #todo-list li span {
   margin-left: 10px;
   left: 0;
+  color: black;
 }
 
 #todo-list li button {
-  position: absolute;
+  margin-left: 20px;
   background-color: transparent;
   border: none;
   font-size: 23px;
   font-weight: bold;
   padding: 0;
   color: palevioletred;
-  right: -30px;
 }
 
 #weathers {
