@@ -29,14 +29,14 @@ body {
   border-bottom: 3px solid lightgray;
   text-align: center;
   font-size: 40px;
-  margin-right: 20px;
+  margin-right: 10px;
   outline: none;
   color: white;
 }
 
 #loginBtn {
   background-color: lightgray;
-  font-size: 40px;
+  font-size: 35px;
   color: white;
   border-radius: 8px;
   border: none;
@@ -78,6 +78,9 @@ body {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
+}
+#todo.hidden {
+  display: none;
 }
 
 #todo-form {
