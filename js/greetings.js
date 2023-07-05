@@ -13,8 +13,10 @@ function onLoginSubmit(event) {
 
 function paintGreetings() {
   const userName = localStorage.getItem(USERNAME_KEY);
+  const hour = new Date().getHours();
+  const say = hour > 6 ? (hour < 12 ? "Cheer up, today!" : hour < 19 ? "Good afternoon" : "Good night") : "Have a sweet dream";
   greeting.classList.remove(HIDDEN_CALSSNAME);
-  greeting.innerText = `Hello ${userName}`;
+  greeting.innerText = `${say} ${userName}`;
 }
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);

@@ -1,3 +1,146 @@
-.hidden {
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 98vw;
+  height: 98vh;
+  position: relative;
+}
+
+#login-form {
+  position: absolute;
+  padding: 0px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login-form.hidden {
   display: none;
+}
+
+#loginInput {
+  background-color: transparent;
+  border: none;
+  padding-bottom: 5px;
+  border-bottom: 3px solid lightgray;
+  text-align: center;
+  font-size: 40px;
+  margin-right: 20px;
+  outline: none;
+  color: white;
+}
+
+#loginBtn {
+  background-color: lightgray;
+  font-size: 40px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+}
+
+#clock {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#greeting {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#greeting.hidden {
+  display: none;
+}
+
+#todo {
+  min-width: 350px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#todo-form input {
+  width: 350px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid gray;
+  color: black;
+  outline: none;
+  width: 100%;
+}
+#todo-form input::placeholder {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#todo-list {
+  padding: 0;
+}
+
+#todo-list li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-size: 25px;
+  display: flex;
+}
+#todo-list li span {
+  margin-left: 10px;
+  left: 0;
+}
+
+#todo-list li button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 0;
+  color: palevioletred;
+  right: -30px;
+}
+
+#weathers {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+#quote {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  right: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
 }

@@ -5,11 +5,13 @@ function onGeoOk(position) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
   fetch(url).then((response) =>
     response.json().then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
+      const weather = document.querySelector("#weathers #weather");
+      const temp = document.querySelector("#weathers #temp");
+      const city = document.querySelector("#weathers #city");
 
-      city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      weather.innerText = `날씨: ${data.weather[0].main}`;
+      temp.innerText = `온도: ${Math.round(data.main.temp)}°C`;
+      city.innerText = `위치: ${data.name}`;
     })
   );
 }
@@ -19,5 +21,3 @@ function onGeoError() {
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
-
-// 0c4bd1debc3884ec5c3c043cf2b74173
